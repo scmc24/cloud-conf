@@ -6,7 +6,7 @@ spring:
     name: service-depot-transfert-withdraw
     
   rabbitmq:
-    host: 172.20.10.2
+    host: 192.168.1.157
     port: 5672
     username: guest
     password: guest
@@ -17,13 +17,13 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.20.10.2:8761/eureka/apps/
+      defaultZone: http://192.168.1.157:8761/eureka/apps/
     register-with-eureka: true
     fetch-registry: true
   instance:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 30
-    hostname: 172.20.10.2
+    hostname: 192.168.1.157
 
 app:
   name: service-depot-transfert-withdraw
