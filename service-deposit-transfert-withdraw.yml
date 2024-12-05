@@ -17,13 +17,13 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://31.220.93.146:8761/eureka/apps/
+      defaultZone: http://192.168.1.157:8761/eureka/apps/
     register-with-eureka: true
     fetch-registry: true
   instance:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 30
-    hostname: 31.220.93.146
+    hostname: 192.168.1.157
 
 app:
   name: service-depot-transfert-withdraw
