@@ -6,7 +6,7 @@ spring:
     name: service-depot-transfert-withdraw
     
   rabbitmq:
-    host: 31.220.93.146
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
@@ -17,13 +17,13 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.1.157:8761/eureka/apps/
+      defaultZone: http://service-registry:8761/eureka/apps/
     register-with-eureka: true
     fetch-registry: true
   instance:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 30
-    hostname: 192.168.1.157
+    hostname: service-registry
 
 app:
   name: service-depot-transfert-withdraw
@@ -34,7 +34,7 @@ app:
 
 db:
   driver: mysql
-  host: localhost          # Matches the Docker service name
+  host: dtw-db         # Matches the Docker service name
   port: 3306
   database: banking_dtw
   username: root
